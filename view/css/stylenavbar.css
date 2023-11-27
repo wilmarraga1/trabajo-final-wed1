@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+
+:root {
+    --color1: #FFDA6A;
+    --color2: #FF6D6C;
+    --font: 'Patua One', cursive;
+    --font-size: 35px;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    /* background-image: url(/view/img/camara1.jpg); */
+}
+
+h1 {
+    font-family: var(--font);
+    font-size: calc(var(--font-size) + 20px);
+    color: var(--color2);
+    margin-top: 150px;
+    transition: .5s;
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--color2);
+    transition: 1s;
+}
+
+.container {
+    height: 100vh;
+    background-color: var(--color1);
+    text-align: center;
+    -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+      -o-transition: background .3s;
+         transition: background .3s;
+}
+
+.container.darken {
+    background: var(--color2);
+}
+
+.riempi {
+    height: 100%;
+}
+
+#menu {
+    background-color: var(--color1);
+    color: var(--color2);
+    width: 300px;
+    height: 100%;
+    position: fixed;
+
+    left: -300px;
+    transition-duration: .5s;
+}
+
+#menu.move {
+    left: 0;
+}
+
+#menu ul {
+    list-style: none;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+
+#menu li {
+    font-size: var(--font-size);
+    font-family: var(--font);
+    padding: 10px 0 10px 0;
+}
+
+
+#hamburger {
+    height: 100px;
+    width: 100px;
+    padding-top: 40px;
+    margin: auto;
+    z-index: 999;
+    cursor: pointer;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.row1, .row2, .row3 {
+    background-color: var(--color2);
+    margin: 10px 0 10px 0;
+    border-radius: 3px;
+
+    transition-duration: .5s;
+}
+
+
+.row1.rotateRight {
+    background-color: var(--color1);
+    transform: rotate(45deg);
+    transform-origin: 0px;
+    left: 15px;
+    position: relative;
+}
+
+.row3.rotateLeft {
+    background-color: var(--color1);
+    transform: rotate(-45deg);
+    transform-origin: 0px;
+    left: 15px;
+    bottom: -3px;
+    position: relative;
+}
+
+.row2.trasparent {
+    background-color: transparent;
+}
+
+@media (max-width: 400px){
+    .row1.rotateRight {
+        background-color: var(--color2);
+    }
+    
+    .row3.rotateLeft {
+        background-color: var(--color2);
+    }
+
+    #menu ul {
+        list-style: none;
+        margin-top: 180px;
+    }
+}
