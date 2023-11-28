@@ -1,5 +1,5 @@
 window.onload = function() {
-    setTimeout(redirect, 3000)
+    setTimeout(redirect, 5000)
   }
 
   function redirect(){
